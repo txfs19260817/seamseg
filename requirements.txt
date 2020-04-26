@@ -1,10 +1,11 @@
 pillow<7.0
+cython
+tensorboardX
 numpy
 umsgpack
-torchvision==0.3
+torchvision==0.2.2
 tqdm
 scikit-image
 pycocotools
-torch==1.1
 git+git://github.com/waspinator/pycococreator.git@0.2.0
 git+https://github.com/mapillary/inplace_abn.git
