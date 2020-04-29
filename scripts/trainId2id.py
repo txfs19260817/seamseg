@@ -33,7 +33,7 @@ args = parser.parse_args()
 
 ## const
 
-# path
+# paths
 inputs = args.inputs
 outputs = args.outputs
 train_citys = [
