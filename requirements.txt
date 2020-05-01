@@ -1,7 +1,7 @@
 pillow<7.0
 cython
 tensorboardX
-numpy
+numpy==1.17.0 
 umsgpack
 torchvision==0.2.2
 tqdm
