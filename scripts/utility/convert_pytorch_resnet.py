@@ -24,6 +24,7 @@ BN_PARAMS = ["weight", "bias", "running_mean", "running_var"]
 
 parser = argparse.ArgumentParser(description="Convert pre-trained ResNet from Pytorch to our format")
 parser.add_argument("net", metavar="NET", type=str, choices=list(MODEL_URLS.keys()), help="Network name")
+parser.add_argument("--local", type=str, default="none", help="Local Network weight file path.")
 parser.add_argument("out_file", metavar="OUT", type=str, help="Output file")
 
 
@@ -67,7 +68,7 @@ def convert(model, structure, bottleneck):
                 pass
 
     return out
-
+    
 
 if __name__ == '__main__':
     args = parser.parse_args()
