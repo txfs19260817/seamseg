@@ -101,3 +101,5 @@ venv.bak/
 
 # other
 .idea/
+metadata.bin
+*.pth.tar
