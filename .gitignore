@@ -3,7 +3,7 @@
 __pycache__/
 *.py[cod]
 *$py.class
-
+seamseg_r50_vistas.zip
 # C extensions
 *.so
 
