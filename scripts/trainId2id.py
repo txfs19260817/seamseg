@@ -20,7 +20,7 @@ parser = argparse.ArgumentParser(description="Panoptic testing script")
 parser.add_argument(
     "--inputs",
     type=str,
-    default="cityscapes_weakly_1to2_trainId",
+    default="cityscapes_weakV2_1to2_trainId",
     help="images predicted by script 'test_panoptic_single.py'"
 )
 parser.add_argument(
@@ -90,9 +90,8 @@ def main():
     # multiprocessing
     p = multiprocessing.Pool()
     files = os.listdir(inputs)
-    p.map(worker, files)
-    p.close()
-    p.join()
+    with multiprocessing.Pool() as p:
+        r = list(tqdm(p.imap(worker, files), total=len(files)))
 
 
 if __name__ == "__main__":
